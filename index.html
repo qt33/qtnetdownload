@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>QTnet（下载中转站）</title>
+  <style>
+    /* CSS样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #333;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: 0.3s;
+    }
+
+    nav a:hover::before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    nav .dropdown-content {
+      display: none;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+    }
+
+    nav .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      border: 1px solid #333;
+    }
+
+    /* 添加点击动画 */
+    @keyframes click-effect {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .click-animation {
+      animation-name: click-effect;
+      animation-duration: 0.3s;
+    }
+  </style>
+  <script src="js/jq.js"></script>
+  <script>
+    function showContent(contentId) {
+      // 隐藏所有的内容区域
+      var sections = document.getElementsByTagName("section");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+
+      // 显示指定的内容区域
+      var content = document.getElementById(contentId);
+      if (content) {
+        content.style.display = "block";
+      }
+    }
+
+    // 添加点击动画效果的JavaScript代码
+    document.addEventListener('DOMContentLoaded', function() {
+      var navItems = document.querySelectorAll('nav a');
+      navItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+          item.classList.add('click-animation');
+          setTimeout(function() {
+            item.classList.remove('click-animation');
+          }, 300);
+        });
+      });
+    });
+  </script>
+</head>
+<body id="v1">
+<header id="v2">
+  <h1 id="v3">Qtnet 下载及实用工具专区</h1>
+</header>
+<nav id="v4"><a href=>返回<<<</a>
+  <div class="dropdown">
+    <a onclick="showContent('utilities')">实用工具&软件</a>
+    <div class="dropdown-content">
+      <a href="#" onclick="showContent('computer')">电脑实用软件</a>
+      <a href="#" onclick="showContent('phone')">手机实用软件</a>
+      <a href="#" onclick="showContent('chatgpt')">ChatGPT</a>
+    </div>
+  </div>
+</nav>
+<section id="v9"></section>
+<section id="computer">
+  <h2>电脑实用软件合集</h2>
+  <p>office 版本大全 (word, excel, ppt都有)  <a href="https://pan.baidu.com/s/1r929BBEzeJ-zxOac9z9SkA#list/path=%2Fsharelink231672117-146812709623164%2Foffice%E5%90%84%E7%89%88%E6%9C%AC&parentPath=%2Fsharelink231672117-146812709623164">点击跳转 </a></p>
+  <p>adobe全家桶(有ps等工具)  <a href="https://pan.baidu.com/s/10qKYlfzk1dzXhUghiW_FAA">点击跳转 密码6666 </a></p>
+  <p>3dxmax(3d设计软件) <a href="https://www.yuque.com/docs/share/17cf2e7a-a8b0-442b-b390-68690abd7685?#%20">点击跳转 </a></p>
+  <p>火绒安全官网  <a href="https://www.huorong.cn/">点击跳转 </a></p>
+</section>
+<section id="phone">
+  <h2>手机实用软件</h2>
+  <p>还在为软件的开屏广告烦心吗？试试李跳跳！  <a href="https://mp.weixin.qq.com/s/0lNwR4HWVugqc_p29mmJ-A">点击跳转 </a></p>
+  <p>老师发的作业太糊不好打印怎么办？试试扫描全能王  <a href="https://www.camscanner.com/zh/download">点击跳转 </a></p>
+</section>
+<section id="chatgpt">
+  <h2>关于ChatGPT</h2>
+  <p>ChatGPT 官网(需要有外网且有账号才可以使用) <a href="https://openai.com/chatgpt">点击跳转 </a></p>
+  <p>ChatGPT(3.5)国内平替版 <a href="https://c.binjie.fun/">点击跳转 </a></p>
+</section>
+<p>QTnet交流群：650457192</p>
+</body>
+  </html>
